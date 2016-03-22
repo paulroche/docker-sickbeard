@@ -1,13 +1,3 @@
-IMAGE_NAME="paulroche/sickbeard"
-CONTAINER_NAME="sickbeard"
-
 # run sickbeard as same uid as plex for NFS
 SICKBEARD_UID=10003
 SICKBEARD_GID=10000
-
-DATA_DIR=/data/sickbeard
-MEDIA_DIR=/mediabox
-
-PORT=8081
-
-DOCKER_OPTS="--cpuset-cpus="0" --memory=1G"
