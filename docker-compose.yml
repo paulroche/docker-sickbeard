@@ -1,8 +1,15 @@
 ---
-sickbeard:
+version: '2'
+services:
+  sickbeard:
+    env_file: ./vars
     build: .
-    container_name: 'sickbeard'
-    volumes:
-        - './data/datadir:/datadir'
-        - './data/media:/media'
+    image: 'paulroche/sickbeard'
+    container_name: sickbeard
     restart: 'always'
+    ports:
+      - "8081:8081"
+    cpuset: "0"
+    volumes:
+      - '/data/sickbeard:/data/sickbeard'
+      - '/mediabox:/mediabox'
