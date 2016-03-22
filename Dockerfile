@@ -1,5 +1,6 @@
 FROM debian:8
-MAINTAINER Dominique Barton
+MAINTAINER Paul Roche
+# cloned from https://github.com/domibarton/docker-sickbeard
 
 #
 # Add SickBeard init script.
