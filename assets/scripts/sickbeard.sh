@@ -16,7 +16,7 @@ echo
 
 # Change UID / GID of SickBeard user.
 printf "Updating sickbeard user... "
-SBEARD=$(id -u sickbeard &> /dev/null)
+SBEARD=$(id -u sickbeard 2> /dev/null)
 if [ $? -eq 0 ]; then
   if [ ${SBEARD} != ${SICKBEARD_UID} ]; then
     groupmod -u ${SICKBEARD_GID} ${USER}
